@@ -373,7 +373,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
       #define ABL_PROBE_PT_1_Y 0
       #define ABL_PROBE_PT_2_X 0
       #define ABL_PROBE_PT_2_Y 150
-      #define ABL_PROBE_PT_3_X 135
+      #define ABL_PROBE_PT_3_X 160
       #define ABL_PROBE_PT_3_Y 75
 
   #endif // AUTO_BED_LEVELING_GRID
@@ -382,7 +382,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
   // these are the offsets to the probe relative to the extruder tip (Hotend - Probe)
   #define X_PROBE_OFFSET_FROM_EXTRUDER 50
   #define Y_PROBE_OFFSET_FROM_EXTRUDER 25.3
-  #define Z_PROBE_OFFSET_FROM_EXTRUDER -8.4
+  #define Z_PROBE_OFFSET_FROM_EXTRUDER -8.3
 
   #define Z_RAISE_BEFORE_HOMING 4       // (in mm) Raise Z before homing (G28) for Probe Clearance.
                                         // Be sure you have this distance over your Z_MAX_POS in case
@@ -433,12 +433,12 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 
 //// MOVEMENT SETTINGS
 #define NUM_AXIS 4 // The axis order in all axis related arrays is X, Y, Z, E
-#define HOMING_FEEDRATE {50*60, 50*60, 200, 0}  // set the homing speeds (mm/min)
+#define HOMING_FEEDRATE {50*60, 50*60, 180, 0}  // set the homing speeds (mm/min)
 
 // default settings
 //4571.42857143
 #define DEFAULT_AXIS_STEPS_PER_UNIT   {80,80,4000,630}  // default steps per unit for Ultimaker
-#define DEFAULT_MAX_FEEDRATE          {500, 500, 3.33, 25}    // (mm/sec)
+#define DEFAULT_MAX_FEEDRATE          {500, 500, 3, 25}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {9000,9000,100,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.
 
 #define DEFAULT_ACCELERATION          3000    // X, Y, Z and E max acceleration in mm/s^2 for printing moves
@@ -699,7 +699,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 // Use M206 command to correct for switch height offset to actual nozzle height. Store that setting with M500.
 //
 #define SERVO_ENDSTOPS {-1, -1, 0} // Servo index for X, Y, Z. Disable with -1
-#define SERVO_ENDSTOP_ANGLES {0,0, 0,0, 165,30} // X,Y,Z Axis Extend and Retract angles
+#define SERVO_ENDSTOP_ANGLES {0,0, 0,0, 125,30} // X,Y,Z Axis Extend and Retract angles
 
 #include "Configuration_adv.h"
 #include "thermistortables.h"
